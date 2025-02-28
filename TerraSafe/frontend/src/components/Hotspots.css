@@ -1,0 +1,151 @@
+.hotspots-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: #f5f7f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.wildlife-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/paw-pattern.png');
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hotspots-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hotspots-header h1 {
+  color: #2c5834;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hotspots-header p {
+  color: #557b59;
+  font-size: 1.1rem;
+}
+
+.hotspots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hotspot-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hotspot-card:hover {
+  transform: translateY(-5px);
+}
+
+.hotspot-card.high {
+  border-left: 5px solid #d32f2f;
+}
+
+.hotspot-card.medium {
+  border-left: 5px solid #f9a825;
+}
+
+.hotspot-card.low {
+  border-left: 5px solid #43a047;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h3 {
+  color: #2c5834;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.risk-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.risk-badge.high {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.risk-badge.medium {
+  background: #fff3e0;
+  color: #f57f17;
+}
+
+.risk-badge.low {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.card-content {
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.card-content strong {
+  color: #2c5834;
+}
+
+.last-updated {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.details-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2c5834;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background: #3a7144;
+}
+
+@media (max-width: 768px) {
+  .hotspots-container {
+    padding: 1rem;
+  }
+  
+  .hotspots-header h1 {
+    font-size: 2rem;
+  }
+  
+  .hotspots-grid {
+    grid-template-columns: 1fr;
+  }
+} 
